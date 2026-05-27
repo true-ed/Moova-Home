@@ -6,7 +6,7 @@
       </section>
       <section class="app__buttons">
         <a
-          href="/moova-0.1.0-arm64-mac.zip"
+          href="./moova-0.1.0-arm64-mac.zip"
           download="moova-0.1.0-arm64-mac.zip"
           class="button button_theme_primary app__button app__button--mac"
           style="
