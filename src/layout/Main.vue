@@ -19,16 +19,22 @@
             MacOS
           </a>
 
-          <button
-            class="button button_theme_primary app__button app__button--windows"
-          >
-            <small>or</small> Windows
-          </button>
+          <div class="app__button-wrapper">
+            <button
+              class="button button_theme_primary app__button app__button--windows"
+            >
+              <small>or</small> Windows
+            </button>
+            <ReleaseTooltip text="Working on publication..." />
+          </div>
         </div>
 
-        <button class="button app__button app__button--github">
-          <img src="../assets/github-mark-white.png" alt="" /> Git Hub
-        </button>
+        <div class="app__button-wrapper">
+          <button class="button app__button app__button--github">
+            <img src="../assets/github-mark-white.png" alt="" /> Git Hub
+          </button>
+          <ReleaseTooltip text="Working on publication..." />
+        </div>
       </section>
     </div>
 
@@ -73,6 +79,7 @@
 
 <script lang="ts" setup>
 import { onMounted, onUnmounted } from "vue";
+import ReleaseTooltip from "../components/ReleaseTooltip.vue";
 
 let animationFrameId: number;
 

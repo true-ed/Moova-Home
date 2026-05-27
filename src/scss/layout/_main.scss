@@ -61,6 +61,19 @@
     }
   }
 
+  &__button-wrapper {
+    position: relative;
+    display: inline-block;
+
+    &:hover {
+      .release-tooltip {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(-50%) translateY(0);
+      }
+    }
+  }
+
   &__button {
     pointer-events: auto;
 
