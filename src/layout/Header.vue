@@ -1,5 +1,5 @@
 <template>
-  <header class="header">
+  <header class="header notranslate" translate="no">
     <div class="header-logo-title"><img src="../assets/icon.png" />ova</div>
   </header>
 </template>
