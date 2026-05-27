@@ -1,0 +1,114 @@
+.button {
+  background: transparent;
+  color: $color-wheat;
+  border: none;
+  padding: 8px 18px 6px 18px;
+  text-align: left;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+  letter-spacing: 1px;
+  font-weight: bold;
+  box-sizing: border-box;
+  backdrop-filter: saturate(15) brightness(2) blur(10px);
+  box-shadow: 0 0 128px 4px rgba(255, 255, 255, 0.4);
+
+  &:hover {
+    backdrop-filter: invert(10%) saturate(5) brightness(2) blur(10px);
+  }
+
+  &_size {
+    &_small {
+      padding: 8px 14px 3px 8px;
+      font-size: 12px;
+    }
+
+    &_large{
+      padding: 16px 28px 6px 16px;
+      font-size: 24px;
+      font-weight: normal;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    cursor: default;
+  }
+
+  &:active {
+    transform: translateY(1px) !important;
+  }
+
+  &_type {
+    &_icon {
+      width: 30px;
+      height: 30px;
+      padding: 0px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &_theme {
+    &_primary {
+      color: white !important;
+      overflow: hidden;
+
+      &:hover {
+
+        &::before {
+          background: rgba(mix(map-get($colors, 12), white, 80), 1);
+        }
+      }
+    }
+
+    &_red {
+      background: $color-red-wheat;
+      box-shadow: inset 0 0 16px rgba(black, 0.3), 4px 4px 0 #000;
+      color: black;
+    }
+
+    &_white {
+      background: $white;
+      color: black;
+      box-shadow: -6px -6px #000;
+      transition: 0.1s;
+
+      &:hover{
+        background-color: $light;
+        box-shadow: -6px -6px #000, inset 0 0 16px rgba(var(--accent-6-rgb), 1), 4px 4px 16px rgba($light, 0.1);
+      }
+    }
+
+    &_green {
+      background: var(--accent-9);
+      box-shadow: inset 0 0 16px rgba(black, 0.3), 4px 4px 0 #000;
+    }
+
+    &_bright-secondary {
+      background: $bright-secondary;
+      color: black;
+      box-shadow: 0 5px 32px -10px rgba(var(--accent-3-rgb), 1);
+
+      &:focus {
+        border: 3px solid white;
+      }
+
+      &:hover {
+        background-color: black;
+        color: white;
+      }
+    }
+
+    &_bright-primary {
+      background: $bright-primary;
+      color: white;
+
+      &:hover {
+        background-color: white;
+        color: black;
+      }
+    }
+  }
+}

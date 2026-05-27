@@ -1,0 +1,73 @@
+$color-black: #000;
+$color-wheat: rgb(251, 255, 233);
+$color-green-wheat: #efffd7;
+$color-blue-wheat: rgb(193, 238, 236);
+$color-red-wheat: rgb(238, 193, 198);
+
+$colors: (
+  1: #001923,
+  2: #00212b,
+  3: #003848,
+  4: #00556c,
+  5: #0087a5,
+  6: #00c7ea,
+  7: #00bcd5,
+  8: #00b9ca,
+  9: #00c8c8,
+  10: #00d8b8,
+  11: #00eca1,
+  12: #00fe7b
+);
+$white: #edfbff;
+
+$primary-blue: $color-black;
+$secondary-blue: map-get($colors, 4);
+$border-focus-blue: map-get($colors, 1);
+$input-focus-shadow: map-get($colors, 1);
+$examples-visible-bg: #edfbff;
+$error: invert(map-get($colors, 12));
+$bright-secondary: white;
+$bright-primary: black;
+$light: lighten($color: map-get($colors, 11), $amount: 40);
+
+$card-gradient: linear-gradient(to right top,
+  map-get($colors, 8),
+  map-get($colors, 9),
+  map-get($colors, 10),
+  map-get($colors, 11));
+
+@use "sass:map";
+
+@mixin theme-light {
+  --primary-blue: #{$primary-blue};
+  --secondary-blue: #{$secondary-blue};
+  --border-focus-blue: #{$border-focus-blue};
+  --input-focus-shadow: #{$input-focus-shadow};
+  --examples-visible-bg: #{$examples-visible-bg};
+  --error: #{$error};
+  --bright-secondary: #{$bright-secondary};
+  --bright-primary: #{$bright-primary};
+  --light: #{$light};
+  --card-gradient: #{$card-gradient};
+}
+
+@mixin accent($index) {
+  $color: map-get($colors, $index);
+  --accent-#{$index}: #{$color};
+}
+
+:root {
+  @include theme-light;
+  @include accent(1);
+  @include accent(2);
+  @include accent(3);
+  @include accent(4);
+  @include accent(5);
+  @include accent(6);
+  @include accent(7);
+  @include accent(8);
+  @include accent(9);
+  @include accent(10);
+  @include accent(11);
+  @include accent(12);
+}
