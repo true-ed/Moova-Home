@@ -5,24 +5,26 @@
         Your dictionary. <span> Now smart </span>
       </section>
       <section class="app__buttons">
-        <a
-          href="./moova-0.1.0-arm64-mac.zip"
-          download="moova-0.1.0-arm64-mac.zip"
-          class="button button_theme_primary app__button app__button--mac"
-          style="
-            text-decoration: none;
-            text-align: center;
-            display: inline-block;
-          "
-        >
-          MacOS
-        </a>
+        <div class="app__buttons-group">
+          <a
+            href="./moova-0.1.0-arm64-mac.zip"
+            download="moova-0.1.0-arm64-mac.zip"
+            class="button button_theme_primary app__button app__button--mac"
+            style="
+              text-decoration: none;
+              text-align: center;
+              display: inline-block;
+            "
+          >
+            MacOS
+          </a>
 
-        <button
-          class="button button_theme_primary app__button app__button--windows"
-        >
-          <small>or</small> Windows
-        </button>
+          <button
+            class="button button_theme_primary app__button app__button--windows"
+          >
+            <small>or</small> Windows
+          </button>
+        </div>
 
         <button class="button app__button app__button--github">
           <img src="../assets/github-mark-white.png" alt="" /> Git Hub

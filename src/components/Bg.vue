@@ -28,11 +28,11 @@ interface GridCell {
   isAccent: boolean;
 }
 
-const vw = window.innerWidth / 50;
-const vh = window.innerHeight / 50;
+const vw = Math.max(window.innerWidth / 50, 18);
+const vh = Math.max(window.innerHeight / 50, 12);
 
-const GRID_WIDTH = 200;
-const GRID_HEIGHT = 100;
+const GRID_WIDTH = 120;
+const GRID_HEIGHT = 80;
 const FONT_SIZE = Math.floor(vw);
 const LINE_HEIGHT = Math.floor(vh * 2);
 const CELL_WIDTH = Math.floor(vw);
