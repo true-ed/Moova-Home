@@ -7,8 +7,8 @@
       <section class="app__buttons">
         <div class="app__buttons-group">
           <a
-            href="./moova-0.1.0-arm64-mac.zip"
-            download="moova-0.1.0-arm64-mac.zip"
+            href="./moova-0.1.0-arm64.dmg"
+            download="moova-0.1.0-arm64.dmg"
             class="button button_theme_primary app__button app__button--mac"
             style="
               text-decoration: none;
